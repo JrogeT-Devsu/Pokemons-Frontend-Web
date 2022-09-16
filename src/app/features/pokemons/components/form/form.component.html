@@ -11,7 +11,7 @@
         <div class="col">
           <app-input
             [placeholderElement]="'nombre'"
-            [(modelElement)]="pokemon.name"
+            [(modelElement)]="pokemon!.name"
           ></app-input>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="col">
           <app-input
             [placeholderElement]="'url'"
-            [(modelElement)]="pokemon.image"
+            [(modelElement)]="pokemon!.image"
           ></app-input>
         </div>
       </div>
@@ -30,24 +30,24 @@
     <div class="col">
       <div class="row">
         <div class="col">
-          <label for="ataque">Ataque({{pokemon.attack}}):</label>
+          <label for="ataque">Ataque({{pokemon!.attack}}):</label>
         </div>
         <div class="col">
           <div class="row">
             0
-            <input class="input-range" type="range" id="ataque" name="ataque" min="0" max="100" [(ngModel)]="pokemon.attack">
+            <input class="input-range" type="range" id="ataque" name="ataque" min="0" max="100" [(ngModel)]="pokemon!.attack">
             100
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <label for="defensa">Defensa({{pokemon.defense}}):</label>
+          <label for="defensa">Defensa({{pokemon!.defense}}):</label>
         </div>
         <div class="col">
           <div class="row">
             0
-            <input class="input-range" type="range" id="defensa" name="defensa" min="0" max="100" [(ngModel)]="pokemon.defense">
+            <input class="input-range" type="range" id="defensa" name="defensa" min="0" max="100" [(ngModel)]="pokemon!.defense">
             100
           </div>
         </div>

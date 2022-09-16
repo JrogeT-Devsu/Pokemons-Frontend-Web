@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class InputComponent {
 
   @Input() placeholderElement!: string;
-  @Input() modelElement!: string;
+  @Input() public modelElement!: string;
   @Output() modelElementChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() onKeyUp: EventEmitter<string> = new EventEmitter<string>();
 

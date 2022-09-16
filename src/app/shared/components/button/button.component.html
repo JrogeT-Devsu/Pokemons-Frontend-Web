@@ -1,6 +1,6 @@
 <button class="btn-action" (click)="emitEvent()">
   <div class="row">
-    <img [src]="'assets/icons/action/'+actionIcon" alt="save icon">
+    <img *ngIf="actionIcon" [src]="'assets/icons/action/'+actionIcon" alt="save icon">
     <label>{{text}}</label>
   </div>
 </button>

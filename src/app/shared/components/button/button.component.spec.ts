@@ -20,4 +20,11 @@ describe('ButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should render text", () => {
+    component.text = "Click me !";
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.innerHTML).toContain("Click me !");
+  });
 });

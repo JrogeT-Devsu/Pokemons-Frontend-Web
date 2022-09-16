@@ -9,7 +9,7 @@ import {PokemonsService} from "../../../../core/services/pokemons/pokemons.servi
 })
 export class PokemonsComponent {
 
-  public pokemonInContext?: Pokemon | null;
+  public pokemonInContext!: Pokemon | null;
 
   public constructor(
     private pokemonsService: PokemonsService
