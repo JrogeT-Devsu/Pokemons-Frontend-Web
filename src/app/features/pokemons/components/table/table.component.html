@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Imagen</th>
+      <th>Ataque</th>
+      <th>Defensa</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemonList">
+      <td>{{pokemon.name}}</td>
+      <td class="td-image">
+        <img [src]="pokemon.image" alt="pokemon image" width="100rem;">
+      </td>
+      <td>{{pokemon.attack}}</td>
+      <td>{{pokemon.defense}}</td>
+      <td class="td-actions">
+        <button class="btn-edit" (click)="editPokemon(pokemon)">
+          <img [src]="'assets/icons/action/edit-purple.png'" alt="edit icon">
+        </button>
+        <button class="btn-delete" (click)="deletePokemon(pokemon)">
+          <img [src]="'assets/icons/action/delete-purple.png'" alt="delete icon">
+        </button>
+      </td>
+    </tr>
+  <tr>
+  </tr>
+  </tbody>
+</table>

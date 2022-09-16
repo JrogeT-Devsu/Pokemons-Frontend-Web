@@ -1,0 +1,65 @@
+<div class="container border-gray">
+  <div class="row">
+    <label for="info">Nuevo Pokemon</label>
+  </div>
+  <div id="info" class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <label for="nombre">Nombre:</label>
+        </div>
+        <div class="col">
+          <input type="text" id="nombre" name="nombre" placeholder="nombre">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="imagen">Imagen:</label>
+        </div>
+        <div class="col">
+          <input type="text" id="imagen" name="nombre" placeholder="url">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <label for="ataque">Ataque:</label>
+        </div>
+        <div class="col">
+          <div class="row">
+            0
+            <input class="input-range" type="range" id="ataque" name="ataque" min="1" max="100">
+            100
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="defensa">Defensa:</label>
+        </div>
+        <div class="col">
+          <div class="row">
+            0
+            <input class="input-range" type="range" id="defensa" name="defensa" min="1" max="100">
+            100
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn-action">
+      <div class="row">
+        <img [src]="'assets/icons/action/save-white.png'" alt="save icon">
+        <label>Guardar</label>
+      </div>
+    </button>
+    <button class="btn-action">
+      <div class="row">
+        <img [src]="'assets/icons/action/cancel-white.png'" alt="cancel icon">
+        <label>Cancelar</label>
+      </div>
+    </button>
+  </div>
+</div>
