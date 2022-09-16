@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PokemonsService} from "../core/services/pokemons/pokemons.service";
 
 @Component({
   selector: 'app-search',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  public word: string = '';
+
+  constructor(
+    private pokemonsService: PokemonsService
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  search() {
+    console.log("searching for: " + this.word);
+    if(this.word.length > 0) {
+      this.pokemonsService.searchPokemon(this.word);
+    }else{
+      this.pokemonsService.clearSearch();
+    }
   }
 
 }

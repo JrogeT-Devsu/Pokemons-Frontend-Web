@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
 import {PokemonsService} from "../../../../core/services/pokemons/pokemons.service";
 import {Pokemon} from "../../../../core/models/Pokemon";
 
@@ -24,7 +24,7 @@ export class TableComponent implements OnInit {
   }
 
   public editPokemon(pokemon: Pokemon): void {
-    this.pokemonsService.editPokemon(pokemon);
+    this.pokemonsService.pokemonInContext.next(pokemon);
   }
 
   public deletePokemon(pokemon: Pokemon): void {

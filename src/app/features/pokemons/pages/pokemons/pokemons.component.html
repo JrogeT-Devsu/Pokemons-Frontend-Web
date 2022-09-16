@@ -1,17 +1,12 @@
 <div class="container">
   <div class="row w-80 justify-between">
     <app-search></app-search>
-    <button class="btn-action">
-      <div class="row">
-        <img [src]="'assets/icons/action/add-white.png'" alt="save icon">
-        <label>Nuevo</label>
-      </div>
-    </button>
+    <app-create></app-create>
   </div>
   <div class="w-80">
     <app-table></app-table>
   </div>
-  <div class="w-80">
-    <app-form></app-form>
+  <div *ngIf="pokemonInContext" class="w-80">
+    <app-form [pokemon]="pokemonInContext"></app-form>
   </div>
 </div>
