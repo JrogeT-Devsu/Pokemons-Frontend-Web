@@ -1,9 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Pokemon} from "../../../../core/models/Pokemon";
 import {PokemonsService} from "../../../../core/services/pokemons/pokemons.service";
 
 @Component({
-  selector: 'app-form',
+  selector: 'pokemon-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.sass']
 })

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {PokemonsService} from "../core/services/pokemons/pokemons.service";
-import {Pokemon} from "../core/models/Pokemon";
+import { Component } from '@angular/core';
+import {PokemonsService} from "../../../../core/services/pokemons/pokemons.service";
+import {Pokemon} from "../../../../core/models/Pokemon";
 
 @Component({
-  selector: 'app-create',
+  selector: 'pokemon-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.sass']
 })

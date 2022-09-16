@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import {PokemonsModule} from "../../../features/pokemons/pokemons.module";
 import {RestService} from "../rest.service";
 import {Pokemon} from "../../models/Pokemon";
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject} from "rxjs";
 
 @Injectable({
   providedIn: 'root',
@@ -36,6 +35,7 @@ export class PokemonsService {
     }else{
       this.updatePokemon();
     }
+    this.pokemonInContext.next(null);
   }
 
   public createPokemon(): void  {

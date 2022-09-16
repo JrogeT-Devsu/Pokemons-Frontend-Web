@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label class="justify-start">
+        Listado de pokemon
+      </label>
+      <app-input
+        [placeholderElement]="'Buscar'"
+        (onKeyUp)="search()"
+        [(modelElement)]="word"
+      ></app-input>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row w-80 justify-between">
-    <app-search></app-search>
-    <app-create></app-create>
+    <pokemon-search></pokemon-search>
+    <pokemon-create></pokemon-create>
   </div>
   <div class="w-80">
-    <app-table></app-table>
+    <pokemon-table></pokemon-table>
   </div>
   <div *ngIf="pokemonInContext" class="w-80">
-    <app-form [pokemon]="pokemonInContext"></app-form>
+    <pokemon-form [pokemon]="pokemonInContext"></pokemon-form>
   </div>
 </div>

@@ -4,9 +4,10 @@ import { TableComponent } from "./components/table/table.component";
 import { PokemonsService } from "../../core/services/pokemons/pokemons.service";
 import { PokemonsComponent } from "./pages/pokemons/pokemons.component";
 import { FormComponent } from "./components/form/form.component";
-import {SearchComponent} from "../../search/search.component";
+import {SearchComponent} from "./components/search/search.component";
 import {FormsModule} from "@angular/forms";
-import {CreateComponent} from "../../create/create.component";
+import {CreateComponent} from "./components/create/create.component";
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {CreateComponent} from "../../create/create.component";
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
   ],
   providers: [
     PokemonsService,

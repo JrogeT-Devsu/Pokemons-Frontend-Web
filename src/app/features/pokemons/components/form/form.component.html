@@ -6,18 +6,24 @@
     <div class="col">
       <div class="row">
         <div class="col">
-          <label for="nombre">Nombre:</label>
+          <label>Nombre:</label>
         </div>
         <div class="col">
-          <input type="text" id="nombre" name="nombre" placeholder="nombre" [(ngModel)]="pokemon.name">
+          <app-input
+            [placeholderElement]="'nombre'"
+            [(modelElement)]="pokemon.name"
+          ></app-input>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <label for="imagen">Imagen:</label>
+          <label>Imagen:</label>
         </div>
         <div class="col">
-          <input type="text" id="imagen" name="nombre" placeholder="url" [(ngModel)]="pokemon.image">
+          <app-input
+            [placeholderElement]="'url'"
+            [(modelElement)]="pokemon.image"
+          ></app-input>
         </div>
       </div>
     </div>
@@ -49,17 +55,15 @@
     </div>
   </div>
   <div class="row">
-    <button class="btn-action" (click)="guardar()">
-      <div class="row">
-        <img [src]="'assets/icons/action/save-white.png'" alt="save icon">
-        <label>Guardar</label>
-      </div>
-    </button>
-    <button class="btn-action" (click)="cancelar()">
-      <div class="row">
-        <img [src]="'assets/icons/action/cancel-white.png'" alt="cancel icon">
-        <label>Cancelar</label>
-      </div>
-    </button>
+    <app-button
+      [text]="'Guardar'"
+      [actionIcon]="'save-white.png'"
+      (clickEvent)="guardar()"
+    ></app-button>
+    <app-button
+      [text]="'Cancelar'"
+      [actionIcon]="'cancel-white.png'"
+      (clickEvent)="cancelar()"
+    ></app-button>
   </div>
 </div>

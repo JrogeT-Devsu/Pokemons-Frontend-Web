@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {PokemonsService} from "../core/services/pokemons/pokemons.service";
+import { Component } from '@angular/core';
+import {PokemonsService} from "../../../../core/services/pokemons/pokemons.service";
 
 @Component({
-  selector: 'app-search',
+  selector: 'pokemon-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.sass']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
   public word: string = '';
 
@@ -14,11 +14,7 @@ export class SearchComponent implements OnInit {
     private pokemonsService: PokemonsService
   ) {}
 
-  ngOnInit(): void {
-  }
-
   search() {
-    console.log("searching for: " + this.word);
     if(this.word.length > 0) {
       this.pokemonsService.searchPokemon(this.word);
     }else{

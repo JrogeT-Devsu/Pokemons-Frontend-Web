@@ -1,9 +1,9 @@
-import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PokemonsService} from "../../../../core/services/pokemons/pokemons.service";
 import {Pokemon} from "../../../../core/models/Pokemon";
 
 @Component({
-  selector: 'app-table',
+  selector: 'pokemon-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.sass']
 })
